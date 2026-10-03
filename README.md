@@ -1,3 +1,4 @@
+
 # 💰 Kharcha-Core: Full-Stack Expense Tracking Application
 A modern, full-stack financial expense management application built with **React** (frontend) and **Node.js/Express** (backend). Designed to help users track expenses, manage budgets, and gain financial insights through intuitive interfaces and AI-powered chatbot assistance.
 **Live Repository:** [Financcino on GitHub](https://github.com/Ramesh1234-ai/Financcino)
@@ -81,19 +82,24 @@ A modern, full-stack financial expense management application built with **React
 - ✅ Automatic expense extraction from receipts
 - ✅ Bulk upload capabilities
 - ✅ Receipt storage and retrieval
+
 ### **Analytics & Reporting**
 - ✅ Interactive spending charts and graphs
 - ✅ Category-wise expense breakdown
 - ✅ Monthly and yearly trends
 - ✅ Export reports (planned)
 
-### **Budget Management**
-- ✅ Set budget limits per category
+### **Budget & Savings Management**
+- ✅ Set budget limits per category with dedicated modal controls
+- ✅ Track and manage savings goals
 - ✅ Budget vs actual spending comparison
-- ✅ Budget alerts and notifications
+- ✅ Automated budget alerts, weekly summary digests, and email notifications
+- ✅ Customizable notification preferences
+
 ### **Authentication & Security**
 - ✅ Secure JWT-based authentication
 - ✅ Clerk integration for modern auth flows
+- ✅ Automated Clerk webhooks for real-time user database sync
 - ✅ Role-based access control
 - ✅ Password encryption with Bcrypt
 - ✅ Rate limiting on API endpoints
@@ -104,7 +110,6 @@ A modern, full-stack financial expense management application built with **React
 - ✅ Smart recommendations
 
 ---
-
 ## 📁 Project Structure
 
 ```
@@ -126,6 +131,8 @@ Kharcha-Core/
 │   │   ├── Receipt.models.js
 │   │   ├── Budget.models.js
 │   │   ├── Transaction.models.js
+│   │   ├── NotificationLog.model.js
+│   │   ├── NotificationPreference.model.js
 │   │   └── Analytics.models.js
 │   ├── routes/                       # API endpoints
 │   │   ├── auth.routes.js
@@ -134,7 +141,15 @@ Kharcha-Core/
 │   │   ├── receipts.routes.js
 │   │   ├── chatbot.routes.js
 │   │   ├── budgets.routes.js
+│   │   ├── savingsGoals.routes.js
+│   │   ├── webhooks.routes.js
+│   │   ├── public.routes.js
 │   │   └── analytics.routes.js
+│   ├── src/                          # Services, jobs, and utils
+│   │   ├── jobs/                    # Budget alert & weekly digest jobs
+│   │   ├── services/                # Email & notification services
+│   │   ├── routes/                  # Notifications routes
+│   │   └── models/
 │   ├── middleware/                   # Express middleware
 │   │   ├── auth.js                  # JWT verification
 │   │   ├── errorHandler.js
@@ -158,11 +173,15 @@ Kharcha-Core/
 │   │   │   │   ├── ProtectedRoute.jsx
 │   │   │   │   ├── ErrorBoundary.jsx
 │   │   │   │   └── Toast.jsx
-│   │   │   ├── dashboard/           # Dashboard pages
+│   │   │   ├── dashboard/           # Dashboard pages & modals
 │   │   │   │   ├── Dashboard.jsx
 │   │   │   │   ├── Analytics.jsx
+│   │   │   │   ├── BudgetModal.jsx
+│   │   │   │   ├── SavingsGoalModal.jsx
 │   │   │   │   ├── Settings.jsx
 │   │   │   │   └── Help.jsx
+│   │   │   ├── settings/            # Notification & settings components
+│   │   │   │   └── NotificationSettings.jsx
 │   │   │   ├── expenses/            # Expense components
 │   │   │   │   ├── ExpenseList.jsx
 │   │   │   │   ├── ExpenseItem.jsx
@@ -198,13 +217,13 @@ Kharcha-Core/
 ├── .gitignore                        # Git ignore rules
 ├── .git/                             # Git repository
 ├── README.md                         # This file
+├── CLERK_WEBHOOK_SETUP.md            # Clerk Webhook integration guide
 ├── GIT_FIX_GUIDE.md                 # Git troubleshooting
 ├── QUICK_FIX_REFERENCE.md           # Quick Git reference
 └── [other docs]
 ```
 
 ---
-
 ## ✅ Prerequisites
 
 Before setting up the project, ensure you have:
@@ -254,10 +273,7 @@ npm install
 # Verify installation
 npm list
 ```
-### **Frontend Setup**
-Navigate to the BrokTok folder and install dependencies:
-```bash
-cd BrokTok
+
 # Install dependencies
 npm install
 # Verify installation
