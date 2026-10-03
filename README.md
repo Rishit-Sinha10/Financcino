@@ -1,8 +1,9 @@
+# 💰 Financcino Full-Stack Expense Tracking Application
 
-# 💰 Kharcha-Core: Full-Stack Expense Tracking Application
 A modern, full-stack financial expense management application built with **React** (frontend) and **Node.js/Express** (backend). Designed to help users track expenses, manage budgets, and gain financial insights through intuitive interfaces and AI-powered chatbot assistance.
 **Live Repository:** [Financcino on GitHub](https://github.com/Ramesh1234-ai/Financcino)
 ---
+
 ## 📋 Table of Contents
 
 - [Overview](#overview)
@@ -13,7 +14,6 @@ A modern, full-stack financial expense management application built with **React
 - [Installation & Setup](#installation--setup)
   - [Backend Setup](#backend-setup)
   - [Frontend Setup](#frontend-setup)
-=======
 - [Environment Configuration](#environment-configuration)
 - [Running the Application](#running-the-application)
 - [API Documentation](#api-documentation)
@@ -23,73 +23,88 @@ A modern, full-stack financial expense management application built with **React
 - [Security Notes](#security-notes)
 - [Contributing](#contributing)
 - [License](#license)
+
 ---
+
 ## 🎯 Overview
+
 **Kharcha-Core** is a comprehensive expense tracking system designed for personal finance management. The application enables users to:
-- 📝 Log and categorize expenses
-- 💳 Upload and process receipts with OCR capabilities
-- 📊 Visualize spending patterns with analytics dashboards
-- 💬 Get AI-powered financial advice through the integrated chatbot
-- 🏦 Set and track budget goals
-- 🔐 Secure authentication and data privacy
-**Project Name Etymology:** "Kharcha" (खर्च) is Urdu/Hindi for "expense" - reflecting the application's core functionality.
+
+- Log and categorize expenses
+- Upload and process receipts with OCR capabilities
+- Visualize spending patterns with analytics dashboards
+- Get AI-powered financial advice through the integrated chatbot
+- Set and track budget goals
+- Secure authentication and data privacy
 
 ---
 
 ## 🛠️ Technology Stack
 
 ### **Backend**
-| Technology | Version | Purpose |
-|-----------|---------|---------|
-| **Node.js** | 18+ | JavaScript runtime |
-| **Express.js** | ^5.2.1 | Web framework & routing |
-| **MongoDB** | Latest | NoSQL database |
-| **Mongoose** | ^9.2.3 | MongoDB ODM |
-| **JWT** | ^9.0.0 | Authentication & authorization |
-| **Bcrypt** | ^5.1.0 | Password hashing |
-| **Multer** | ^1.4.5 | File upload handling |
-| **Helmet** | ^7.0.0 | Security headers |
-| **Express-Validator** | ^7.0.0 | Input validation |
-| **Winston** | ^3.10.0 | Logging |
-| **CORS** | ^2.8.5 | Cross-origin requests |
-| **Express-Rate-Limit** | ^7.0.0 | API rate limiting |
+
+| Technology             | Version | Purpose                        |
+| ---------------------- | ------- | ------------------------------ |
+| **Node.js**            | 18+     | JavaScript runtime             |
+| **Express.js**         | ^5.2.1  | Web framework & routing        |
+| **MongoDB**            | Latest  | NoSQL database                 |
+| **Mongoose**           | ^9.2.3  | MongoDB ODM                    |
+| **JWT**                | ^9.0.0  | Authentication & authorization |
+| **Bcrypt**             | ^5.1.0  | Password hashing               |
+| **Multer**             | ^1.4.5  | File upload handling           |
+| **Helmet**             | ^7.0.0  | Security headers               |
+| **Express-Validator**  | ^7.0.0  | Input validation               |
+| **Winston**            | ^3.10.0 | Logging                        |
+| **CORS**               | ^2.8.5  | Cross-origin requests          |
+| **Express-Rate-Limit** | ^7.0.0  | API rate limiting              |
+
 ### **Frontend**
-| Technology | Version | Purpose |
-|-----------|---------|---------|
-| **React** | ^19.2.0 | UI framework |
-| **Vite** | Latest | Build tool & dev server |
-| **React Router** | ^7.12.0 | Client-side routing |
-| **TailwindCSS** | ^4.2.0 | Styling |
-| **Clerk** | ^5.59.4 | Authentication service |
-| **Recharts** | ^3.6.0 | Data visualization |
-| **React Icons** | ^5.5.0 | Icon components |
-| **Lucide React** | ^0.408.0 | UI icons |
-| **Axios** | (via API service) | HTTP client |
+
+| Technology       | Version           | Purpose                 |
+| ---------------- | ----------------- | ----------------------- |
+| **React**        | ^19.2.0           | UI framework            |
+| **Vite**         | Latest            | Build tool & dev server |
+| **React Router** | ^7.12.0           | Client-side routing     |
+| **TailwindCSS**  | ^4.2.0            | Styling                 |
+| **Clerk**        | ^5.59.4           | Authentication service  |
+| **Recharts**     | ^3.6.0            | Data visualization      |
+| **React Icons**  | ^5.5.0            | Icon components         |
+| **Lucide React** | ^0.408.0          | UI icons                |
+| **Axios**        | (via API service) | HTTP client             |
+
 ### **Additional Tools**
+
 - **Git** - Version control
 - **ESLint** - Code linting
 - **Jest** - Testing framework (backend)
+
 ---
-## ✨ Features
+
+## Features
+
 ### **Expense Management**
+
 - ✅ Add, edit, and delete expenses
 - ✅ Categorize expenses (Food, Transport, Utilities, etc.)
 - ✅ Filter expenses by date, category, and amount
 - ✅ Real-time expense tracking
 
 ### **Receipt Processing**
+
 - ✅ Upload receipt images (JPG, PNG)
 - ✅ Automatic expense extraction from receipts
 - ✅ Bulk upload capabilities
 - ✅ Receipt storage and retrieval
 
 ### **Analytics & Reporting**
+
 - ✅ Interactive spending charts and graphs
 - ✅ Category-wise expense breakdown
 - ✅ Monthly and yearly trends
 - ✅ Export reports (planned)
 
 ### **Budget & Savings Management**
+
 - ✅ Set budget limits per category with dedicated modal controls
 - ✅ Track and manage savings goals
 - ✅ Budget vs actual spending comparison
@@ -97,6 +112,7 @@ A modern, full-stack financial expense management application built with **React
 - ✅ Customizable notification preferences
 
 ### **Authentication & Security**
+
 - ✅ Secure JWT-based authentication
 - ✅ Clerk integration for modern auth flows
 - ✅ Automated Clerk webhooks for real-time user database sync
@@ -105,11 +121,13 @@ A modern, full-stack financial expense management application built with **React
 - ✅ Rate limiting on API endpoints
 
 ### **AI Assistance**
+
 - ✅ ChatBot for financial advice
 - ✅ Spending pattern analysis
 - ✅ Smart recommendations
 
 ---
+
 ## 📁 Project Structure
 
 ```
@@ -163,7 +181,7 @@ Kharcha-Core/
 │   ├── seed.js                      # Database seeding
 │   └── test-routes.sh               # Testing script
 │
-├── BrokTok/                          # React + Vite Frontend
+├── frontend/                          # React + Vite Frontend
 │   ├── src/
 │   │   ├── components/               # React components
 │   │   │   ├── auth/                # Auth components
@@ -217,18 +235,16 @@ Kharcha-Core/
 ├── .gitignore                        # Git ignore rules
 ├── .git/                             # Git repository
 ├── README.md                         # This file
-├── CLERK_WEBHOOK_SETUP.md            # Clerk Webhook integration guide
-├── GIT_FIX_GUIDE.md                 # Git troubleshooting
-├── QUICK_FIX_REFERENCE.md           # Quick Git reference
-└── [other docs]
 ```
 
 ---
+
 ## ✅ Prerequisites
 
 Before setting up the project, ensure you have:
 
 ### **System Requirements**
+
 - **Node.js** 18.x or higher
 - **npm** 8.x or higher (comes with Node.js)
 - **Git** 2.30+
@@ -246,6 +262,7 @@ git --version
 ```
 
 ### **External Services**
+
 - **MongoDB Atlas** (free tier available at https://www.mongodb.com/cloud/atlas)
 - **Clerk Auth** (free tier at https://clerk.com)
 
@@ -254,18 +271,24 @@ git --version
 ## 🚀 Installation & Setup
 
 This is a monorepo with both backend and frontend. Clone once, configure both separately.
+
 ### **Clone the Repository**
+
 ```bash
 # Clone the main repository
 git clone https://github.com/Ramesh1234-ai/Financcino.git
-cd Kharcha-Core
+cd Financcino
 # Verify structure
 ls -la
 # Should show: Backend/, BrokTok/, .git/, .gitignore, README.md, etc.
 ```
+
 ---
+
 ### **Backend Setup**
+
 Navigate to the Backend folder and install dependencies:
+
 ```bash
 cd Backend
 # Install dependencies
@@ -275,7 +298,13 @@ npm list
 ```
 
 # Install dependencies
+
 npm install
+
 # Verify installation
+
 npm list
+
+```
+
 ```
