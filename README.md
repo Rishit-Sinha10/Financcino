@@ -28,7 +28,7 @@ A modern, full-stack financial expense management application built with **React
 
 ## 🎯 Overview
 
-**Kharcha-Core** is a comprehensive expense tracking system designed for personal finance management. The application enables users to:
+**Financcino** is a comprehensive expense tracking system designed for personal finance management. The application enables users to:
 
 - Log and categorize expenses
 - Upload and process receipts with OCR capabilities
@@ -131,7 +131,7 @@ A modern, full-stack financial expense management application built with **React
 ## 📁 Project Structure
 
 ```
-Kharcha-Core/
+Financcino/
 ├── Backend/                          # Node.js Express API
 │   ├── config/
 │   │   └── config.js                # Database & app configuration
